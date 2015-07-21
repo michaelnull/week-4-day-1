@@ -8,6 +8,7 @@ namespace WebApplication5.Controllers
 {
     public class HomeController : Controller
     {
+        
         public ActionResult Index()
         {
             ViewBag.Message = "";
@@ -27,5 +28,22 @@ namespace WebApplication5.Controllers
 
             return View();
         }
+        Classmate a = new Classmate("Brandon", 71, "brown");
+      
+       
     }
+                        
+    public class Classmate
+    {
+        string Name { get; set; }
+        int Height { get; set; }
+        string Hair { get; set; }
+        public Classmate(string name, int height, string hair)
+        {
+            this.Name = name;
+            this.Height = height;
+            this.Hair = hair;
+        }
+    }
+    
 }
